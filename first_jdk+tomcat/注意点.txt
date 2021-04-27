@@ -1,3 +1,4 @@
 1.servers.xml里可以改对应端口 80的话外部访问就可以不用加端口号，80是默认的
 2.webapp中ROOT是默认目录，可以做好网站后部署到这个文件下
-3.发生tomcat配置问题：访问http://localhost:8080/ 遇到 Access Error: 404可能是8080端口被占用，可以通过修改servers.xml修改
+3.Tomcat启动后中文乱码 ，修改Tomcat/conf目录下面的"logging.properties"文件，把所有的encoding=UTF-8的改成encodng=GBK，保存之后，重启Tomcat服务器
+4.发生tomcat配置问题：访问http://localhost:8080/ 遇到 Access Error: 404可能是8080端口被占用，可以通过修改servers.xml修改
