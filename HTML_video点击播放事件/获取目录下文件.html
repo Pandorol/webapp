@@ -1,0 +1,28 @@
+<script type="text/javascript">
+var mp4files=[];
+var path = "D:\\eclipse-workspace\\v3\\public";
+function readFiles(path,mp4files)
+{
+	
+	fso	= new ActiveXObject("Scripting.FileSystemObject");
+	
+	fldr = fso.GetFolder(path);
+	
+	fc = new Enumerator(fldr.files);
+	
+	
+	for(;	 !fc.atEnd();	fc.moveNext())	 
+	{
+		s=fc.item();	
+		if(s.type=="MP4 文件")
+		{
+			//document.write("type:"+s.type + " name:"+s.name +"<br/>");
+			mp4files.push(s.name);
+		}
+		
+	}
+}
+readFiles(path,mp4files);
+//document.write(path+mp4files[25]);
+
+</script>
